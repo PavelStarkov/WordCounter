@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCounter", "WordCounter\WordCounter.csproj", "{EA577AFB-D84B-4578-815F-9C93FA46B534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterLib", "CounterLib\CounterLib.csproj", "{467E1F61-2FB7-46B5-B7B2-BF35FF3E2F01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA577AFB-D84B-4578-815F-9C93FA46B534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA577AFB-D84B-4578-815F-9C93FA46B534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA577AFB-D84B-4578-815F-9C93FA46B534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA577AFB-D84B-4578-815F-9C93FA46B534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467E1F61-2FB7-46B5-B7B2-BF35FF3E2F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467E1F61-2FB7-46B5-B7B2-BF35FF3E2F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467E1F61-2FB7-46B5-B7B2-BF35FF3E2F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467E1F61-2FB7-46B5-B7B2-BF35FF3E2F01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
