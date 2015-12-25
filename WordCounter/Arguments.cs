@@ -12,30 +12,28 @@ namespace WordCounter
         public string DataStructure { get; private set; }
         public string SortingAlgorithm { get; private set; }
         public int WorkersCount { get; private set; }
+        public bool ShowHelp { get; private set; }
 
         public int DefaultMultiThreadedTextChunkSize { get; private set; }
 
 
         public Arguments(string[] args)
         {
-            bool showHelp;
+            Init(args);
 
-            Init(args, out showHelp);
-
-            if (!showHelp && (args.Length == 1) && string.IsNullOrEmpty(Input)) Input = args[0];
+            if (!ShowHelp && (args.Length == 1) && string.IsNullOrEmpty(Input)) Input = args[0];
 
             IsValid = !string.IsNullOrEmpty(Input);
 
-            if (showHelp || !IsValid) Console.WriteLine(Resources.HelpDescription);
+            if (ShowHelp || !IsValid) Console.WriteLine(Resources.HelpDescription);
         }
 
-        private void Init(string[] args, out bool help)
+        private void Init(string[] args)
         {
-            var showHelp = false;
             var p = new OptionSet() {
 
                 {  Resources.InputKey, Resources.InputDescription, v => Input = v },
-                {  Resources.HelpKey, Resources.HelpDescription,  v => showHelp = !string.IsNullOrEmpty(v) },
+                {  Resources.HelpKey, Resources.HelpDescription,  v => ShowHelp = !string.IsNullOrEmpty(v) },
                 {  Resources.DataStructureKey, Resources.DataStructureDescription,  v => DataStructure = v },
                 {  Resources.SortingAlgorithmKey, Resources.SortingAlgorithmDescription,  v => SortingAlgorithm = v },
                 {  Resources.WorkersCountKey, Resources.WorkersCountDescription,  v => WorkersCount = int.Parse(v)  },
@@ -53,8 +51,6 @@ namespace WordCounter
                 Console.WriteLine(Resources.ArgsParserErrorMessage);
                 throw;
             }
-
-            help = showHelp;
         }
     }
 }
